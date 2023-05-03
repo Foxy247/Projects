@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="480" height="480"></canvas>
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+
+        let snake = [{
+            x: 19,
+            y: 3
+        }, ];
+
+        let food = {
+            x: 4,
+            y: 5
+        };
+
+        let cols = 20;
+        let rows = 20;
+
+        let cellWidth = canvas.width / cols;
+        let cellHeight = canvas.height / rows;
+
+
+        let: direction: 'LEFT';
+
+
+
+        setInterval(gameLoop, 300); //Gameloop wird alle 100ms ausführen 
+
+
+
+        draw(); //draw methode wird nur 1 mal aufgerufen! 
+
+        document.addEventListener('keydown', keyDown); // function keyDown wird ausgeführt wenn Pfeiltaste (event keydown) gedrückt wird  
+
+
+        function draw() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+            ctx.fillStyle = 'white'; //snake
+
+
+            ctx.fillStyle = 'yellow'; //food
+            add(food.x, food.y);
+
+            requestAnimationFrame(draw); //draw wird immer wieder wiederholt! 
+
+        };
+
+        function add(x, y) {
+            ctx.fillRect(x * cellWidth, y * cellHeight, 20 - 1, 20 - 1)
+        }
+
+
+        function gameLoop() {
+            if (direction == 'LEFT') {
+                snake[0].x--; // schlange bewegt sich nach links
+            }
+            if (direction == 'RIGHT') {
+                snake[0].x++; // schlange bewegt sich nach 
+            }
+            if (direction == 'UP') {
+                snake[0].y--; // schlange bewegt sich nach 
+            }
+            if (direction == 'DOWN') {
+                snake[0].y++; // schlange bewegt sich nach 
+            }
+
+        };
+
+        // Keylisteners 
+        function keyDown(e) {
+            if (e.keyCode == 37) {
+                direction = 'LEFT';
+            }
+            if (e.keyCode == 38) {
+                direction = 'UP';
+            }
+            if (e.keyCode == 39) {
+                direction = 'RIGHT';
+            }
+            if (e.keyCode == 40) {
+                direction = 'DOWN';
+            }
+
+        }
+    </script>
+</body>
+
+</html>
