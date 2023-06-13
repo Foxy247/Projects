@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const product = {
+            name: 'socks',
+            price: 1090
+        };
+
+        console.log(product);
+        console.log(product.name);
+        console.log(product.price);
+
+        product.name = 'cotton socks';
+        console.log(product);
+
+        product.helloThere = true; 
+        console.log(product);
+
+        const product2 = {
+            name: 'shirt', 
+            'delivery-time': '1 day',
+            rating: {
+                stars: 4.5,
+                count: 87
+            }
+        }
+
+        console.log(product2.rating.count);
+
+        console.log('hello'.length);
+        console.log('hello'.toUpperCase());
+
+        const object1 = {
+            message: 'hello',
+        };
+        const object2 = object1;
+
+        const object4 = {
+            message: 'Good job!',
+            price: 799
+        };
+        // const message = object4.message;
+        const { message, price } = object4; 
+        
+
+    </script>
+</body>
+</html>
