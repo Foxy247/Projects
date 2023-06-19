@@ -9,16 +9,20 @@
 <body>
     <p>
         <button onclick="
-            updateCalculation('1');
+            calculation +='1';
+            console.log(calculation);
         ">1</button>
         <button onclick="
-            updateCalculation('2');
+            calculation +='2';
+            console.log(calculation);
         ">2</button>
         <button onclick="
-            updateCalculation('3');
+            calculation +='3';
+            console.log(calculation);
         ">3</button>
         <button onclick="
-            updateCalculation('+');
+            calculation +=' + ';
+            console.log(calculation);
         ">+</button>
     </p>
 
@@ -62,10 +66,12 @@
 
     <p>
         <button onclick="
-            updateCalculation(0);
+            calculation +='0';
+            console.log(calculation);
         ">0</button>
         <button onclick="
-            updateCalculation()
+            calculation +='.';
+            console.log(calculation);
         ">.</button>
         <button onclick="
             eval(calculation);
@@ -79,8 +85,8 @@
     </p>
     <script>
         let calculation = '';
-
-        function updateCalculation(value) {
+        
+        function updateCalculation (value){
             calculation += value;
             console.log(calculation);
         }
