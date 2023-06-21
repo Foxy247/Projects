@@ -66,8 +66,7 @@
 
     <p>
         <button onclick="
-            calculation +='0';
-            console.log(calculation);
+            updateCalculation('0');
         ">0</button>
         <button onclick="
             calculation +='.';
@@ -86,11 +85,10 @@
     <script>
         let calculation = '';
         
-        function updateCalculation (value){
+        function updateCalculation(value){
             calculation += value;
             console.log(calculation);
         }
-
     </script>
 </body>
 </html>

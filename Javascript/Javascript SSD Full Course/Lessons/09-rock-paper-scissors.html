@@ -12,11 +12,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         margin: 0;
       }
     </style>
   </head>
-
+    
   <body>
     <div>
       <p>Rock Paper Scissors</p>
@@ -24,10 +25,7 @@
 
     <div>
       <button
-        onclick="
-    playGame('rock');
-  "
-      >
+        onclick="playGame('rock');">
         Rock
       </button>
 
@@ -59,12 +57,18 @@
       </button>
     </div>
 
+    <p class="js-score"></p>
+
     <script>
+      
       let score = JSON.parse(localStorage.getItem("score")) || {
         wins: 0,
         losses: 0,
         ties: 0,
       };
+
+      document.querySelector('.js-score')
+        .innerHTML = ` Wins: ${score.wins}, Losses ${score["losses"]}, Ties ${score.ties}`;
 
       /*
     if (!score) {
@@ -80,7 +84,8 @@
         const computerMove = pickComputerMove();
 
         result = "";
-
+        
+        //Player Move
         if (playerMove === "scissors") {
           if (computerMove === "rock") {
             result = "You lose";

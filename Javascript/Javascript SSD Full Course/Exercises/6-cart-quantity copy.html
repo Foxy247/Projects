@@ -60,9 +60,14 @@
     console.log(`Cart quantity: ${cartQuantity}`); 
   ">-3</button>
 
-  <script> // 5h-k
+  <script> // 6k
 
     let cartQuantity = 0; 
+
+    if (cartQuantity > 10){
+      alert('The cart is full');
+      
+    }
 
     console.log(typeof cartQuantity);
     
