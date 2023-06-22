@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock-Paper-Scissors</title>
     <style>
+      /*
       body {
         width: 100vw;
         height: 100vh;
@@ -15,6 +16,7 @@
         flex-direction: column;
         margin: 0;
       }
+      */
     </style>
   </head>
     
@@ -128,14 +130,12 @@
 
         localStorage.setItem("score", JSON.stringify(score));
 
+        //display result
         updateScoreElement();
 
-        document.querySelector('.js-result').
-        innerHTML = result
+        document.querySelector('.js-result').innerHTML = result;
 
-        //display result
-        alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}. 
-Wins: ${score.wins}, Losses ${score["losses"]}, Ties ${score.ties}`);
+        document.querySelector('.js-moves').innerHTML = `You ${playerMove} - Computer ${computerMove}` 
       }
 
       function updateScoreElement(){
