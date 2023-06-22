@@ -51,6 +51,7 @@
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score');
+    updateScoreElement()
   "
       >
         Reset Score
@@ -67,8 +68,8 @@
         ties: 0,
       };
 
-      document.querySelector('.js-score')
-        .innerHTML = ` Wins: ${score.wins}, Losses ${score["losses"]}, Ties ${score.ties}`;
+      //Rendered score (DOM)
+      updateScoreElement();
 
       /*
     if (!score) {
@@ -112,6 +113,7 @@
           }
         }
 
+        // update Score
         if (result === "You win") {
           score.wins += 1;
         } else if (result === "You lose") {
@@ -122,8 +124,15 @@
 
         localStorage.setItem("score", JSON.stringify(score));
 
+        updateScoreElement();
+
         alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}. 
 Wins: ${score.wins}, Losses ${score["losses"]}, Ties ${score.ties}`);
+      }
+
+      function updateScoreElement(){
+        document.querySelector('.js-score')
+          .innerHTML = ` Wins: ${score.wins}, Losses ${score["losses"]}, Ties ${score.ties}`;
       }
 
       function pickComputerMove() {
