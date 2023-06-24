@@ -17,10 +17,20 @@
       Subscribe
     </button>
 
-    
+    <p>Amazon Shipping Calculator</p>               <!--24.06.-->
+
+    <input type="text" placeholder="Cost of order" class="js-cost-input">
+    <button>Calculate</button>
+
+    <p>Order under €40 = + €10 shipping.</p>
+    <p>Order over €40 = FREE shipping.</p>
 
 
     <script>
+      function calculateTotal () {
+        document.querySelector('.js-cost-input')
+      }
+
       function subscribe() {
         const buttonElement = document.querySelector(".js-subscribe-button");
 
