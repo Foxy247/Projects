@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <p>Todo List Practise 1</p>
+
+    <input type="text" placeholder="Todo name" class="js-input">
+
+    <button onclick="addTodo();">Add</button>
+
+    <div class="js-todo-list"></div>
+
+    <script>
+        // I need an Array to store my to-do items
+        const todoList = [1, 2, 3];
+
+        // Function to add a new to-do item
+            // take value from input - push it onto array         
+        function addTodo(){
+            const inputElement = document.querySelector('.js-input');
+            const todo = inputElement.value;
+
+            todoList.push(todo);
+            console.log(todoList)
+            renderTodoList()
+
+        };
+
+
+        // loop through the array
+        // create HTML code for each todo
+        // renders HTML on web page
+        // put everything inside a function 
+
+        function renderTodoList(){
+            let todoListHTML = '';
+
+            for(let i = 0; i < todoList.length; i++){
+                const value = todoList[i];
+                const html = `<p>${value}</p>`;
+                todoListHTML = todoListHTML + html
+            }
+            console.log(todoListHTML);
+            document.querySelector('.js-todo-list')
+                .innerHTML = todoListHTML;
+        }
+        renderTodoList();
+
+        
+
+
+
+
+        
+    </script>
+</body>
+</html>
