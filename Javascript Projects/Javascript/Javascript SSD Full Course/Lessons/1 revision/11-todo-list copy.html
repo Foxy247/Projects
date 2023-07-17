@@ -6,54 +6,70 @@
     <title>Todo List</title>
 </head>
 <body>
-    <p>Todo List Practise 1</p>
+    <p>Todo List</p>
 
     <input type="text" placeholder="Todo name" class="js-input">
+    <input type="date">
 
     <button onclick="addTodo();">Add</button>
 
     <div class="js-todo-list"></div>
+    
 
     <script>
-        // I need an Array to store my to-do items
-        const todoList = [1, 2, 3];
+        // Create Array to store  to-do items
+        // create object in array to group todo text with due Date
+        const todoList = [{
+                name: 'Harry Potter anhören',
+                dueDate: '17.07.2023'
+            }, {
+                name: 'Fantastic Beasts anschauen',
+                dueDate: '17.07.2023'
+            }, {
+                name: 'Fanni vögeln',
+                dueDate: '17.07.2023'
+            }
 
+        ];
         // Function to add a new to-do item
-            // take value from input - push it onto array         
-        function addTodo(){
-            const inputElement = document.querySelector('.js-input');
-            const todo = inputElement.value;
-
-            todoList.push(todo);
-            console.log(todoList)
-            renderTodoList()
-
-        };
-
+            // take value from input - push it onto array 
+        
 
         // loop through the array
         // create HTML code for each todo
         // renders HTML on web page
-        // put everything inside a function 
+        // put everything inside a function
+        // add delete button
+            // delete a value from array
+        // update the List again
+
+        renderTodoList();
 
         function renderTodoList(){
+
             let todoListHTML = '';
 
             for(let i = 0; i < todoList.length; i++){
-                const value = todoList[i];
-                const html = `<p>${value}</p>`;
-                todoListHTML = todoListHTML + html
+                const todoObject = todoList[i];
+                const name = todoObject.name;
+                const dueDate = todoObject.dueDate;
+                const html = `
+                    <p>
+                        ${name} ${dueDate}
+                        <button onclick="
+                            todoList.splice(${i}, 1);
+                            renderTodoList();
+                        ">Delete</button>
+                    </p>
+                `;
+                todoListHTML += html
             }
             console.log(todoListHTML);
+
             document.querySelector('.js-todo-list')
                 .innerHTML = todoListHTML;
         }
         renderTodoList();
-
-        
-
-
-
 
         
     </script>

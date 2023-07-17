@@ -17,11 +17,19 @@
     
 
     <script>
-        // I need an Array to store my to-do items
-        const todoList = [
-            'listen to Harry Potter',
-            'watch Fantastic Beasts', 
-            'Fuck Fanni'
+        // Create Array to store  to-do items
+        // create object in array to group todo text with due Date
+        const todoList = [{
+            name:'Harry Potter anhören',
+            dueDate:'15-07-2023'
+            }, {
+            name:'Fantastische Tierwesen anschauen',
+            dueDate:'15-07-2023'
+            }, {
+            name:'Fanni ficken',
+            dueDate:'15-07-2023'
+            }
+            
         ];
 
         // Function to add a new to-do item
@@ -43,6 +51,7 @@
         // put everything inside a function
         // add delete button
             // delete a value from array
+        // update the List again
 
         renderTodoList();
 
@@ -51,10 +60,16 @@
             let todoListHTML = '';
 
             for(let i = 0; i < todoList.length; i++){
-                const todo = todoList[i];
+                const todoObject = todoList[i];
+                const name = todoObject.name;
+                const dueDate = todoObject.dueDate;
                 const html = `
                     <p>
-                        ${todo}
+                        ${name} ${dueDate}
+                        <button onclick="
+                            todoList.splice(${i}, 1);
+                            renderTodoList();
+                        ">Delete</button>
                     </p>
                 `;
                 todoListHTML += html
