@@ -1,46 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-</head>
-<body>
-    <p>Todo List</p>
-
-    <input type="text" placeholder="Todo name" class="js-input">
-    <input type="date" class="js-due-date-input">
-
-    <button onclick="addTodo();">Add</button>
-
-    <div class="js-todo-list"></div>
-    
-
-    <script>
-        // Create Array to store  to-do items
+// Create Array to store  to-do items
         // create object in array to group todo text with due Date
         const todoList = [{
-                name: 'Harry Potter anhören',
-                dueDate: '17.07.2023'
+            name:'Harry Potter anhören',
+            dueDate:'15-07-2023'
             }, {
-                name: 'Fantastic Beasts anschauen',
-                dueDate: '17.07.2023'
+            name:'Fantastische Tierwesen anschauen',
+            dueDate:'15-07-2023'
             }, {
-                name: 'Fanni vögeln',
-                dueDate: '17.07.2023'
+            name:'Fanni vögeln',
+            dueDate:'15-07-2023'
             }
-
+            
         ];
+
         // Function to add a new to-do item
-            // take value from input - push it onto array 
-            function addTodo(){
+            // take value from input - push it onto array
+        // update addTodo Function
+            // get dueDate out of date selector
+        function addTodo(){
             const todoInput = document.querySelector('.js-input');
-            const value = todoInput.value;
+            const name = todoInput.value;
 
             const dateInputElement = document.querySelector('.js-due-date-input')
             const dueDate = dateInputElement.value;
             
-            todoList.push(value);
+            todoList.push({
+                name: name,
+                dueDate: dueDate
+            });
             console.log(todoList);
 
             todoInput.value = '';  
@@ -63,8 +50,11 @@
 
             for(let i = 0; i < todoList.length; i++){
                 const todoObject = todoList[i];
-                const name = todoObject.name;
-                const dueDate = todoObject.dueDate;
+            // shortcut to take name and dueDate out of the object
+                // const name = todoObject.name;
+                // const dueDate = todoObject.dueDate;
+                const {name, dueDate} = todoObject;
+                
                 const html = `
                     <p>
                         ${name} ${dueDate}
@@ -82,8 +72,3 @@
                 .innerHTML = todoListHTML;
         }
         renderTodoList();
-
-        
-    </script>
-</body>
-</html>
