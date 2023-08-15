@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>Youtube Subscribe Button</p>
+  <button class="js-subscribe-button" onclick="subscribe();">Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+  <input type="text" placeholder="Cost of order" class="js-cost-input">
+  <button onclick="calculateTotal();">Calculate</button>
+  <script>
+    // I want a text and a button 
+    // I want to change the text from subscribe to subscribed when clicked
+
+    function subscribe(){
+      
+      const buttonElement = document.querySelector('.js-subscribe-button');
+      if(buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerText = 'Subscribed';
+      } else {
+        buttonElement.innerText = 'Subscribe';
+      }
+    }
+
+    // check if input value is under 40
+    // add 10 if under else don't 
+
+    function calculateTotal(){
+      const buttonElement = document.querySelector('.js-cost-input');
+
+      if(buttonElement < 40){
+        buttonElement += 10
+      }
+    }
+
+  </script>
+</body>
+</html>
