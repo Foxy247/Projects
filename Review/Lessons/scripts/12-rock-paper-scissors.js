@@ -17,7 +17,7 @@ if (!score) {
 }
  */
 
-  let isAutoPlaying = false; //keeps track of wether we play or not
+  let isAutoPlaying = false; 
   let intervalId; 
 
   function autoPlay(){
@@ -32,21 +32,8 @@ if (!score) {
       isAutoPlaying = false; 
     }
   }
-
-  document.querySelector('.js-rock-button')
-    .addEventListener('click', () => {
-      playGame('rock');
-    });
-
-  document.querySelector('.js-paper-button')
-    .addEventListener('click', () => {
-      playGame('paper');
-    });
-
-  document.querySelector('.js-scissors-button')
-    .addEventListener('click', () => {
-      playGame('scissors');
-    });
+  // when click on button play game with rock
+  
 
   function playGame(playerMove) {
     const computerMove = pickComputerMove();
