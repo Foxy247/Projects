@@ -13,64 +13,42 @@
             
         ];
 
-        // Function to add a new to-do item
-            // take value from input - push it onto array
-        // update addTodo Function
-            // get dueDate out of date selector
-        function addTodo(){
-            const todoInput = document.querySelector('.js-input');
-            const name = todoInput.value;
+        // add a new todo 
 
-            const dateInputElement = document.querySelector('.js-due-date-input')
-            const dueDate = dateInputElement.value;
+        function addTodo() {
+            const todoInput = document.querySelector('.js-input');
+            const name = todoInput.value
             
+            const dueDateInput = document.querySelector('.js-due-date-input')
+            const dueDate = dueDateInput.value;
+
             todoList.push({
-                // name: name,
-                // dueDate: dueDate
                 name,
                 dueDate
-            });
-            console.log(todoList);
-
-            todoInput.value = '';  
+            })
             renderTodoList();
+            todoInput.value = '';
+            dueDateInput.value = '';
         }
 
-        // go through the array
-        // create HTML code for each todo
-        // renders HTML on web page
-        // put everything inside a function
-        // add delete button
-            // delete a value from array
-        // update the List again
 
         renderTodoList();
 
+        // renderTodoList function
         function renderTodoList(){
-
-            let todoListHTML = '';
-
             todoList.forEach((todoObject, index) => {
-                
                 const name = todoObject.name;
                 const dueDate = todoObject.dueDate;
-               
+
                 const html = `
                     <div>${name}</div>
                     <div>${dueDate}</div>
                     <button onclick="
-                        todoList.splice(${index}, 1);
-                        renderTodoList();
-                    " class="delete-todo-button">Delete</button>
-                    
-                    
+                        todoList.splice(${index}, 1)
+                        renderTodoList(); 
+                    "></button>
                 `;
-                todoListHTML += html
-            });
-
-            console.log(todoListHTML);
-
-            document.querySelector('.js-todo-list')
-                .innerHTML = todoListHTML;
+                
+            })
         }
         renderTodoList();

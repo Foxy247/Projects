@@ -13,10 +13,21 @@
             
         ];
 
+        document.querySelector('.js-add-todo-button')
+            .addEventListener()
+
         // Function to add a new to-do item
             // take value from input - push it onto array
         // update addTodo Function
             // get dueDate out of date selector
+        // go through the array
+        // create HTML code for each todo
+        // renders HTML on web page
+        // put everything inside a function
+        // add delete button
+            // delete a value from array
+        // update the List again
+
         function addTodo(){
             const todoInput = document.querySelector('.js-input');
             const name = todoInput.value;
@@ -61,9 +72,8 @@
                     <button onclick="
                         todoList.splice(${index}, 1);
                         renderTodoList();
-                    " class="delete-todo-button">Delete</button>
-                    
-                    
+                    " class="delete-todo-button">Delete
+                    /button>                                      
                 `;
                 todoListHTML += html
             });
