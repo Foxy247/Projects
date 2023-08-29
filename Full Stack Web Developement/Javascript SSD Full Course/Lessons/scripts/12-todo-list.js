@@ -20,6 +20,7 @@
 
         // Function to add a new to-do item
             // take value from input - push it onto array
+        // update addTodo Function
             // get dueDate out of date selector
         // go through the array
         // create HTML code for each todo
@@ -68,10 +69,7 @@
                 const html = `
                     <div>${name}</div>
                     <div>${dueDate}</div>
-                    <button onclick="
-                        todoList.splice(${index}, 1);
-                        renderTodoList();
-                    " class="delete-todo-button js-delete-todo-button">Delete
+                    <button class="delete-todo-button js-delete-todo-button">Delete
                     </button>                                      
                 `;
                 todoListHTML += html

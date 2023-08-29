@@ -36,42 +36,40 @@
             renderTodoList();
         }
 
-        // go through the array
-        // create HTML code for each todo
-        // renders HTML on web page
-        // put everything inside a function
-        // add delete button
-            // delete a value from array
-        // update the List again
 
+        // create a loop 
+        // take value pair out of todoList array
+        // take name and dueDate out and save it in variables
+        // wrap todoName and dueDate in html code 
+        // render the it on the page 
+        // add a delete todo button 
+            // take 1 value out of array 
+            // render array
         renderTodoList();
-
         function renderTodoList(){
 
-            let todoListHTML = '';
+            let todoListHTML = ''
 
-            for(let i = 0; i < todoList.length; i++){
-                const todoObject = todoList[i];
-            // shortcut to take name and dueDate out of the object
-                 const name = todoObject.name;
-                 const dueDate = todoObject.dueDate;
-                //const {name, dueDate} = todoObject;
-                
+            for(let i = 0 ; i > todoList.length ; i++){
+                const todoObject = todoList[i]
+
+                const name = todoObject.name
+                const dueDate = todoObject.dueDate
+
                 const html = `
                     <div>${name}</div>
                     <div>${dueDate}</div>
                     <button onclick="
-                        todoList.splice(${i}, 1);
+                        todoList.splice(${i}, 1)
                         renderTodoList();
-                    " class="delete-todo-button">Delete</button>
-                    
-                    
+                    ">Delete</button>
+
                 `;
                 todoListHTML += html
             }
-            console.log(todoListHTML);
-
             document.querySelector('.js-todo-list')
-                .innerHTML = todoListHTML;
+                .innerHTML = todoListHTML
         }
+
+        
         renderTodoList();
