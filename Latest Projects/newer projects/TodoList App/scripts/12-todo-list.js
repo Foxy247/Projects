@@ -20,6 +20,7 @@
 
         // Function to add a new to-do item
             // take value from input - push it onto array
+        // update addTodo Function
             // get dueDate out of date selector
         // go through the array
         // create HTML code for each todo
@@ -58,31 +59,31 @@
 
         function renderTodoList(){
 
-            let todoListHTML = ''
+            let todoListHTML = '';
 
             todoList.forEach((todoObject, index) => {
-                const name = todoObject.name
-            })
-            
-            /*for(let i = 0 ; i < todoList.length ; i++){
-                const todoObject = todoList[i]
-
-                const name = todoObject.name
-                const dueDate = todoObject.dueDate
-
+                
+                const name = todoObject.name;
+                const dueDate = todoObject.dueDate;
+               
                 const html = `
                     <div>${name}</div>
                     <div>${dueDate}</div>
-                    <button onclick="
-                        todoList.splice(${i}, 1)
-                        renderTodoList();
-                    " class="delete-todo-button">Delete</button>
-
+                    <button class="delete-todo-button js-delete-todo-button">Delete
+                    </button>                                      
                 `;
                 todoListHTML += html
-            }*/
-            console.log(todoList)
+            });           
+
             document.querySelector('.js-todo-list')
-                .innerHTML = todoListHTML
+                .innerHTML = todoListHTML;
+
+            document.querySelectorAll('.js-delete-todo-button')
+                .forEach((deleteButton, index) => {
+                    deleteButton.addEventListener('click', () => {
+                        todoList.splice(index, 1);
+                        renderTodoList();
+                    })
+                })
         }
         renderTodoList();
