@@ -30,7 +30,6 @@
                 name,
                 dueDate
             });
-            console.log(todoList);
 
             todoInput.value = '';  
             renderTodoList();
@@ -46,11 +45,12 @@
             // take 1 value out of array 
             // render array
         renderTodoList();
+
         function renderTodoList(){
 
             let todoListHTML = ''
 
-            for(let i = 0 ; i > todoList.length ; i++){
+            for(let i = 0 ; i < todoList.length ; i++){
                 const todoObject = todoList[i]
 
                 const name = todoObject.name
@@ -62,11 +62,12 @@
                     <button onclick="
                         todoList.splice(${i}, 1)
                         renderTodoList();
-                    ">Delete</button>
+                    " class="delete-todo-button">Delete</button>
 
                 `;
                 todoListHTML += html
             }
+            console.log(todoList)
             document.querySelector('.js-todo-list')
                 .innerHTML = todoListHTML
         }

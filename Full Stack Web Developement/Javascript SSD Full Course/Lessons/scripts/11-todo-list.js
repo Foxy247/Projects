@@ -50,7 +50,7 @@
 
             let todoListHTML = '';
 
-            for(let i = 0; i > todoList.length; i++){
+            for(let i = 0; i < todoList.length; i++){
                 const todoObject = todoList[i];
                 //const {name, dueDate} = todoObject;
 
