@@ -1,9 +1,12 @@
 // *Variables*
 // Declare a variable, assign it a boolean, and alert the value
-
+const manu = true 
+alert(manu.true)
 
 // Declare a variable, reassign it to your favorite color, and console log the value
-
+let color = 'green'
+color = 'blue'
+console.log(color)
 
 // *Functions*
 // Create a function that takes in 4 numbers and returns the sum of the first 3 numbers divided by the fourth. Return the result. Call the function.
