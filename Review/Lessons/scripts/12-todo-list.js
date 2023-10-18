@@ -64,7 +64,7 @@
                 const name = todoObject.name
             })
             
-            /*for(let i = 0 ; i < todoList.length ; i++){
+            for(let i = 0 ; i < todoList.length ; i++){
                 const todoObject = todoList[i]
 
                 const name = todoObject.name
@@ -80,7 +80,7 @@
 
                 `;
                 todoListHTML += html
-            }*/
+            }
             console.log(todoList)
             document.querySelector('.js-todo-list')
                 .innerHTML = todoListHTML

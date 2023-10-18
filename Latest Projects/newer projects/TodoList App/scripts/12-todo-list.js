@@ -1,13 +1,13 @@
 // Create Array to store  to-do items
         // create object in array to group todo text with due Date
         const todoList = [{
-            name:'Harry Potter anhören',
+            name:'buy groceries',
             dueDate:'15-07-2023'
             }, {
-            name:'Fantastische Tierwesen anschauen',
+            name:'walk the dog',
             dueDate:'15-07-2023'
             }, {
-            name:'Fanni vögeln',
+            name:'build todo app',
             dueDate:'15-07-2023'
             }
             

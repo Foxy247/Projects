@@ -7,7 +7,7 @@
             name:'Fantastische Tierwesen anschauen',
             dueDate:'15-07-2023'
             }, {
-            name:'Fanni vögeln',
+            name:'Fanni treffen',
             dueDate:'15-07-2023'
             }
             
