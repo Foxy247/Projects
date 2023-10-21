@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+
+// 10.10
+
+// 11.10
+  // function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+  //     return laLigaGoals+copaDelReyGoals+championsLeagueGoals
+  // }
+
+// 17.10
+// Convert number to reversed array of digits
+//Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+  // let n = [ 1, 2, 3, 4, 5 ]    
+  // function digitize(n) {
+  // return String(n).split('').map(Number).reverse()
+  // }
+  // // console.log(n);
+
+// 19.10.
+// Array plus array
+
+  arr1 = [1,4,2,-1]
+  arr2 = [3,-2,1,-4]
+  combined = [...arr1, ...arr2]          
+function arrayPlusArray(arr1, arr2) {
+    // spread out arrays
+  const combined = [...arr1, ...arr2]; 
+//   add them up
+  return combined.reduce((total,n) => {
+    return total + n 
+  }, 0)
+}
+
+console.log(combined);
+
+  // array reduce 
+  let numbers = [1, -1, 2, 3]
+
+      // let sum = 0;
+      // for(let n of numbers)
+      //     sum+= n; 
+      
+      // a = 0, c = 1 => a = 1
+      
+
+      let sum = numbers.reduce((accumulator, currentValue) => {
+          return accumulator + currentValue
+      },0 )
+      
+      // console.log(sum)
+</script>
+
+</body>
+</html>
