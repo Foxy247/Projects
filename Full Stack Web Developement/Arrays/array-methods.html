@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// array reduce 
+    let numbers = [1, -1, 2, 3]
+
+    // let sum = 0;
+    // for(let n of numbers)
+    //     sum+= n; 
+
+    // a = 0, c = 1 => a = 1
+
+    let sum = numbers.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue
+    },0 )
+
+    // console.log(sum)
+
+// array.filter
+    //given is the array numbers, return all the positive numbers 
+const numbers = [1, -1, 2, 3]
+
+// const filtered = numbers.filter(function(value) {
+//     return value >= 0
+// })
+
+const filtered = numbers.filter(value => value >= 0
+)
+
+
+
+console.log(filtered);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

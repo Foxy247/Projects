@@ -28,15 +28,26 @@
 
 // *Conditionals*
 //Create a function that takes in a choice (rock, paper, or scissors) and determines if the player won a game of rock paper scissors against a bot using the above function
-    function rockPaperScissors2 (playerChoice){
+    function checkWin (playerChoice){
         let botChoice = rockPaperScissors()
+        
         if(
-            (playerChoice === 'rock')
-        ){
-
-        }
+            (playerChoice === 'rock' && botChoice === 'scissors') || 
+            (playerChoice === 'paper' && botChoice === 'rock') ||
+            (playerChoice === 'scissors' && botChoice === 'paper')){
+                console.log('You win')
+            } 
+             else if (playerChoice === botChoice){
+                console.log('You tie')
+            } else{
+                {
+                console.log('You lose')
+            }
+            }    
     }
-    console.log(bot)
+    checkWin('rock')
+    
+
 //*Loops*
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
     // function rockPaperScissors3 (){
@@ -44,16 +55,3 @@
     // }
 
 
-// procedual example
-    let baseSalary = 30_000;
-    let overtime = 10; 
-    let rate = 20;
-
-    function getWage(baseSalary, overtime, rate) {
-        return baseSalary + (overTime * rate);
-    }
-
-// OOP example
-let employee = {
-     
-}
