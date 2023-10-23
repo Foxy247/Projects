@@ -43,4 +43,4 @@ console.log(headOrTails())
 
 //*Loops*
 //Create a function that takes in a number. Console log the result of heads or tails using the previous function x times where x is the number passed into the function. Call the function.
-    function 
+    
