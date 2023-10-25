@@ -17,15 +17,34 @@
   //     return laLigaGoals+copaDelReyGoals+championsLeagueGoals
   // }
 
+  
 // 17.10
 // Convert number to reversed array of digits
 //Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
     // convert number to string
+    
+    function digitize(n) {
+      const nString = n.toString()
+       const nArr = nString.split('').reverse()
+       return nArr.map(nString => parseInt(nString))
+    }
+
+    // function digitize(n){
+    //   return String(n).split('').map(Number).reverse()
+    // }
+
+
+    // console.log(digitize(12345));
+
+    const string = 'Hey everyone, Sour here!'
+    const arr = string.split(' ')
+
+    console.log(arr);
 
 
 
-// 19.10.
+    // 19.10.
 // Array plus array
 
   arr1 = [1,4,2,-1]
@@ -40,7 +59,7 @@ function arrayPlusArray(arr1, arr2) {
   }, 0)
 }
 
-console.log(combined);
+// console.log(combined);
 
   // array reduce 
   let numbers = [1, -1, 2, 3]
