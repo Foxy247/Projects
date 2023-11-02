@@ -19,3 +19,5 @@ function MakeSFCharacter(punch,kick,catchPhrase,specialMove){
 let ryu = new MakeSFCharacter('high', 'high', 'Get over here', 'Hadddduuuuken')
 
 
+
+

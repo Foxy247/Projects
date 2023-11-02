@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+// 31.10.
+let arr1 = [2,4,8]
+let arr2 = [2,4,6]
+
+let arrMerged = arr1.concat(arr2)
+arrMerged.sort((a,b) => a - b)
+let arrNoDuplicates = [... new Set(arrMerged)]
+return arrNoDuplicates
+
+console.log(arrNoDuplicates);
+
+    
+
+</script>
+</body>
+</html>
