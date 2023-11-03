@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         
+
+        let fanni = {
+            name: 'Fanni',
+            age: 27,
+            "her dog": {
+                name: 'blacky',
+                color: 'black',
+                age: 11
+            },
+        }
+        
+
+        fanni.isGirlfriend = true
+        // delete fanni.age
+        console.log(fanni);
+
+        
+        // Factory Function
+        function createCircle(radius) {
+            return {
+                radius,
+                draw: function(){
+                    console.log();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
