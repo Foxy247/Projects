@@ -6,39 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // function onlyEvens(nums){
-        //     let evens = []
 
-        //     nums.forEach(n => {
-        //         if(n % 2 === 0){
-        //             evens.push(n)
-        //         }
-                 
-        //     })
-        //     return evens
-        // }
-        // // console.log(onlyEvens([1,2,3,4,5,6]));
+<script>
+let a1 = [2, 4, 8]
+let b1 = [2, 4, 6]       
 
-        // let movies = [lotr,hp,got,tw]
+function mergeArrays(a, b) {
+  let arrMerged = a1.concat(b1)
+    arrMerged.sort((a,b) => a-b)
+    arrNoDuplicates = [...new Set (arrMerged)]
+  return arrNoDuplicates
+}
 
-        // lastMovie = movies[movies.length - 1]
-        // // console.log(lastMovie);
-        
-        // dog = 'blacky'
-        // console.log(dog);
-        
-        arr = [1,-4,7,12]
-
-        function positiveSum(arr){
-            let total = 0 
-            for(i=0; i<arr.length; i++){
-                if(arr[i]>0){
-                    total += arr[i]
-                }
-            }
-            return total
-        }
-    </script>
+console.log(mergeArrays());
+</script>
 </body>
 </html>
