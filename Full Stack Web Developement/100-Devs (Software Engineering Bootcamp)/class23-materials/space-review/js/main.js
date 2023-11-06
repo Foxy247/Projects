@@ -1,20 +1,34 @@
 //Arrays
 
 //Create and array of numbers. Sum all of the numbers. Alert the sum.
-    nums = [2,3,5,23,6]
+   let nums =  [1,3,5,2]
 
-    nums = nums.reduce((acc,c) => acc + c)
-    // alert(nums)
+   
+   console.log(nums.reduce((acc,c) => acc + c));
     
 //Create a function that takes in an array of numbers
 //Return a new array of numbers that is every original number squared
-    function squared(nums){
-        Math.pow(nums,2)
-    }
-//Create a function that takes string
+
+newArr = nums => nums.map(num => num**2)
+
+
+
+    
+//Create a function that takes a string
 //Print the reverse of that string to the console
-    function reverse(str){
-        
-    }
+
+function reverseString(str){
+    // split
+    let splitString = str.split("")
+    // reverse
+    let reverseArray = splitString.reverse()
+    // join
+    let joinArray = reverseArray.join("")
+    return joinArray 
+}
+
+console.log(reverseString("hello"));
+
+
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not

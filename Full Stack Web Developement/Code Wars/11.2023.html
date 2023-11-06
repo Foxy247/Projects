@@ -20,8 +20,27 @@ function mergeArrays(a, b) {
     return arrMerged
 }
 
-console.log(mergeArrays())
+// console.log(mergeArrays())
 
+// 6.11
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+
+// add positives
+function countPositivesSumNegatives(input) {
+    if (input === null) return []
+    if (input.filter(n => n != 0).length == 0) return []
+  
+    let sumOfPositives = 0 
+    let sumOfNegatives = 0 
+
+    for (const n of input){
+        if(n < 0) sumOfNegatives += n
+        if(n > 0) sumOfPositives += 1
+    }
+    return [sumOfPositives,sumOfNegatives]
+}
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
 
      
 
