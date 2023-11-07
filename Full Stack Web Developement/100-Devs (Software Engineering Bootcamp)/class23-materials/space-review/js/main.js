@@ -19,16 +19,22 @@ newArr = nums => nums.map(num => num**2)
 
 function reverseString(str){
     // split
-    let splitString = str.split("")
+    let splitString = str.split('')
     // reverse
     let reverseArray = splitString.reverse()
     // join
-    let joinArray = reverseArray.join("")
+    let joinArray = reverseArray.join('')
     return joinArray 
 }
+
+let unoReverse = str => console.log(str.split('').reverse().join(''))
 
 console.log(reverseString("hello"));
 
 
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
+
+const palindromeCheck = str => console.log(str === str.split('').reverse().join('') )
+
+palindromeCheck('racecar')
