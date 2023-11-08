@@ -25,9 +25,24 @@ sum = numbers.reduce((acc,c) => acc + c)
 
 // console.log(sum);
 
-arr.sort((a,b) => a-b)
+// arr.sort((a,b) => a-b)
 
-n % 2 === 0
+// n % 2 === 0
+
+
+function onlyEvens(nums){
+  let evens = []
+
+  nums.forEach(n => {
+    if(n % 2 === 0){
+    evens.push(n)
+  }
+  })
+
+  
+  return evens
+}
+console.log(onlyEvens([1,2,4,7]));
 </script>
 </body>
 </html>
