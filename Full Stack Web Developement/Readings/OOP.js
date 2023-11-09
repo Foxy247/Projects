@@ -17,3 +17,16 @@ let employee = {
      }
 }
 employee.getWage()
+
+
+// Factory Function
+function createCircle(radius){
+    return {
+        radius
+    }
+}
+
+// Constructor Function
+function Circle(radius) {
+    this.radius = radius;
+}
