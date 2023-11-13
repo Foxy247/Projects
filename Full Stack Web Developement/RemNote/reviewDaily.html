@@ -61,7 +61,23 @@
 let numbers = [1, -1, 2, 3]
 numbers = numbers.reduce((sum,c)=> sum + c)
 
-console.log(numbers);
+// console.log(numbers);
+
+
+function positiveSum(arr) {
+  let positives = 0
+  for(i=0; i<arr.length;i++){
+    if(arr[i] > 0){
+    positives += arr[i]
+  }
+  }
+  
+  return positives
+}
+
+function positiveSum(arr) {
+  return arr.reduce((a,b) => a + (b > 0 ? b : 0))
+}
 </script>
 </body>
 </html>

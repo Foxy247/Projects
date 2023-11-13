@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// merge 2 arrays, sorted and no dublicates
+let arr1 = [1,2,2,4,3]
+let arr2 = [2,4,3,4,10]
+
+
+function mergeArrays(a, b) {
+    arrMerged = arr1.concat(arr2)
+    arrMerged.sort((a,b)=> a-b)
+    arrMerged = [... new Set(arrMerged) ]
+    return arrMerged
+}
+
+// console.log(mergeArrays())
+
+
+
+
+     
+
+</script>
+
+</body>
+</html>
