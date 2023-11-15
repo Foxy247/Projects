@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+function getGrade (s1, s2, s3) {
+  let averageScore = ((s1+s2+s3)/3)
+
+  if(averageScore >= 90 && averageScore <= 100){
+    return 'A'
+  }
+  if(averageScore >= 80 && averageScore <= 90){
+    return 'B'
+  }
+  if(averageScore >= 70 && averageScore <= 80){
+    return 'C'
+  }
+  if(averageScore >= 60 && averageScore <= 70){
+    return 'D'
+  }
+  if(averageScore >= 0 && averageScore < 60){
+    return 'F'
+  }
+}
+
+</script>
+
+</body>
+</html>
