@@ -46,7 +46,10 @@ let names = characters.map(character => character.name)
 // Get an array of all heights
 let heights = characters.map(character => characters.height)
 // Get an array of objects with just name and height properties
-let nameAndHeights = characters.map(character => {})
+let nameAndHeights = characters.map(character => ({
+    name: character.name,
+    height: character.height,
+}))
 console.log(nameAndHeights);
 // Get an array of all first names
     
@@ -58,6 +61,7 @@ console.log(nameAndHeights);
 
 // FILTER
 // Get characters with mass greater than 100
+characters.filter(character => character.mass > 100)
 // Get characters with height less than 200
 // Get all male characters
 // Get all female characters

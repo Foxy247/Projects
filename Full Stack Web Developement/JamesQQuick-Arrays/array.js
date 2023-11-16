@@ -35,7 +35,10 @@ let names = characters.map(character => character.name)
 // Get an array of all heights
 let heights = characters.map(character => characters.height)
 // Get an array of objects with just name and height properties
-let nameAndHeights = characters.map(character => {})
+let nameAndHeights = characters.map(character => 
+    {
+    
+})
 console.log(nameAndHeights);
 // Get an array of all first names
     
