@@ -7,26 +7,15 @@
 </head>
 <body>
     <script>
-        
-// function n1pown2 (n1,n2){
-//     console.log(Math.pow(n1,n2));
-// }
 
-let movies = ['hp','hdr','tw']
+let numbers = [10,20,30]
 
-const lastElement = movies [movies.length - 1]
+newNumbers = numbers.shift()
 
-// console.log(lastElement);
-
-function checkMonth(m){
-    let month = m.toLowercase()
-    if(month === 'may' || month === 'june' || month === 'july'){
-        alert('YAY')
-    } else {
-        alert('Booo')
-    }
+function cubeRootIt(num){
+    console.log(Math.cbrt(num).toFixed(2));
 }
-
+cubeRootIt(10)
     </script>
 </body>
 </html>
