@@ -10,12 +10,17 @@
 
 let numbers = [10,20,30]
 
-newNumbers = numbers.shift()
-
-function cubeRootIt(num){
-    console.log(Math.cbrt(num).toFixed(2));
+function onlyEvens(nums){
+    let evens = []
+    
+    nums.forEach(n =>{
+    if(n % 2 === 0){ 
+    evens.push(n)
+    }})
+    
+    
+    return evens
 }
-cubeRootIt(10)
     </script>
 </body>
 </html>
