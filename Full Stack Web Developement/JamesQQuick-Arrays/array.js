@@ -42,9 +42,13 @@ let nameAndHeights = characters.map(character =>
 console.log(nameAndHeights);
 // Get an array of all first names
     
-// REDUCE
+// *REDUCE*
 // Get the total mass of all characters
+const totalMass = characters.reduce((acc,c) => acc + c.mass, 0)
+console.log(totalMass)
 // Get the total height of all characters
+const totalHeight = characters.reduce((acc,cur) => acc + cur.height , 0);
+console.log(totalHeight);
 // Get the total number of characters in all the character names
 // Get the total number of characters by eye color (hint. a map of eye color to count)
 
