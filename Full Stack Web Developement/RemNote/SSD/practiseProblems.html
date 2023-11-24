@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+let array = [12,22,13,15]
+
+function arraySwap(array){
+    let lastIndex = array.length - 1
+    
+    let firstValue = array[0]  
+    let lastValue = array[lastIndex]
+
+    array[0] = lastValue
+    array [lastIndex] = firstValue
+
+    return array
+}
+console.log(arraySwap([12,22,13,15]));
+
+</script>
+</body>
+</html>
