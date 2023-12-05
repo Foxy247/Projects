@@ -17,4 +17,4 @@ function PizzaFactory (name,size,sauce,toppings){
     }
 }
 
-let 
+let prosciutto = PizzaFactory('prosciutto', 'large', 'hot', ['tomato sauce', 'cheese', 'prosciutto ham'])
