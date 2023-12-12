@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Counter</title>
+</head>
+<body>
+
+    <h1>Coffee Counter</h1>
+
+    <h2 class="cups total">0</h2>
+
+    <button class="remove-cup">-</button>
+    <button class="add-cup">+</button>
+
+    
+     
+    <script>
+        let displayCup = document.querySelector('.cups.total') // Corrected selector
+        let addCup = document.querySelector('.add-cup')
+        let removeCup = document.querySelector('.remove-cup')
+
+let count = 0 // Corrected variable name
+
+addCup.addEventListener('click', () => {
+    count++ // Corrected variable name
+    updateDisplay();
+})
+
+removeCup.addEventListener('click', () => {
+    count-- // Corrected variable name
+    updateDisplay();
+})
+
+function updateDisplay(){
+    displayCup.innerHTML = count
+}
+
+</script>
+</body>
+</html>
