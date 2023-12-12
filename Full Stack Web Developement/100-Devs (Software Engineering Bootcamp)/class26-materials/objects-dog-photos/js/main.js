@@ -12,3 +12,5 @@ fetch("https://dog.ceo/api/breeds/image/random")
 
 // how do I plug this into the dom?
     //with document.querySelector 
+
+    
