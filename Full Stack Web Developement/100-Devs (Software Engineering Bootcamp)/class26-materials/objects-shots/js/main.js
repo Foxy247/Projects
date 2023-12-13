@@ -3,7 +3,7 @@
 fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-      console.log(data.strDrink)
+      console.log(data)
       document.querySelector('img').src  
     })
     .catch(err => {
@@ -12,8 +12,9 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
 
     console.log(); 
 
-    {{
-      console.log(2*4)
-    }}
+    // name:         strDrink
+    // photo:        strImageSource
+    // instructions: strInstructions
+
 
     
