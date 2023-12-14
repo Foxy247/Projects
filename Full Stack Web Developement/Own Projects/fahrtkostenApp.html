@@ -10,6 +10,7 @@
     
     <h1>Fahrtkostenrechner</h1>
 
+    
     <button class="+1">+1</button>
     <button>+2</button>
     
@@ -22,8 +23,13 @@
         let fahrtenMinus
         let fahrtenDisplay 
 
+        let fahrten = 0 
+
+        fahrtenPlus.addEventlistener('click', fahrtenIncrement())
+        
+
         function fahrtenIncrement() {
-            count++
+            farhten++
         }
 
 
