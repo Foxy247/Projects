@@ -14,4 +14,7 @@ class Netflix {
   stop() {
     console.log("stopping");
   }
+  saveToPlaylist() {
+    console.log("saved to List");
+  }
 }
