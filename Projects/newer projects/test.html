@@ -2,28 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta ="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
-        product.delivery = "4 days"
-        product['delivery-time'] = "4 days"
+        // product.delivery = "4 days"
+        // product['delivery-time'] = "4 days"
 
-        function Person(name,age,gender){
-            this.name = name
-            this.age = age 
-            this.gender = gender
+        // function Person(name,age,gender){
+        //     this.name = name
+        //     this.age = age 
+        //     this.gender = gender
+        // }
+
+        // let Manu = new Person('Emanuel', 28, 'male')
+        // let Fanni = new Person('Fanni', 27, 'female')
+
+        // let person = {
+        //     name: 'Manu',
+        //     age: 28,
+        //     gender: 'male',
+        // }
+
+        class Person{
+            constructor(papagei,klopapier,bla){
+                this.name = papagei
+                this.age = klopapier
+                this.gender = bla
+            }
         }
+        let Manu = new Person('Manu',28,'male')
 
-        let Manu = new Person('Emanuel', 28, 'male')
-        let Fanni = new Person('Fanni', 27, 'female')
-
-        let person = {
-            name: 'Manu',
-            age: 28,
-            gender: 'male',
-        }
+        console.log(
+            Manu
+        );
     </script>
 </body>
 </html>
