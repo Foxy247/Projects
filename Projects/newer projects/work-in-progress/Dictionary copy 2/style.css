@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  input[type="text"] {
+    padding: 8px;
+    width: 60%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 8px 15px;
+    cursor: pointer;
+  }
+  
+  #definition {
+    margin-top: 20px;
+  }
+  
