@@ -2,7 +2,7 @@
 document.querySelector('button').addEventListener('click', getFetch)
 
 function getFetch(){
-  const choice = document.querySelector('input').value
+  const choice = document.querySelector("input").value.toLowerCase();
   const url = 'https://pokeapi.co/api/v2/pokemon/'+choice
 
   fetch(url)
@@ -14,4 +14,6 @@ function getFetch(){
           console.log(`error ${err}`)
       });
 }
+
+" www.example.com/page?name=John&age=30";
 
