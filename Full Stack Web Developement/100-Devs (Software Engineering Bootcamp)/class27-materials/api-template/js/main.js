@@ -15,5 +15,4 @@ function getFetch(){
       });
 }
 
-" www.example.com/page?name=John&age=30";
 
