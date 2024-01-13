@@ -3,12 +3,8 @@ document.querySelector("button").addEventListener("click", getFetch);
 function getFetch() {
   const choice = document.querySelector("input").value.toLowerCase();
 
-  if (!choice) {
-    console.log("Please provide a valid choice");
-    return;
-  }
-
   const apiKey = "HhcbPKsveYR0MtmY3AOuDlxnQymQrnov2Ycb2jrt";
+
   const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${choice}`;
 
   fetch(url)
@@ -17,6 +13,7 @@ function getFetch() {
       console.log(data);
       document.querySelector("img").src = data.hdurl;
       document.querySelector("h3").innerText = data.explanation;
+      document.querySelector("h2").innerText = data.title;
     })
     .catch((err) => {
       console.log(`error ${err}`);
