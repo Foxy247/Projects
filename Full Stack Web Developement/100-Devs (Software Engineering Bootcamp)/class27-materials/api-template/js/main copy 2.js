@@ -13,7 +13,9 @@ function getFetch() {
       console.log(data);
       if (data.media_type === "image") {
         document.querySelector("img").src = data.hdurl;
+        document.querySelector("iframe").src = ""; // Set video source to empty string
       } else if (data.media_type === "video") {
+        document.querySelector("img").src = ""; // Set image source to empty string
         document.querySelector("iframe").src = data.url;
       }
       
