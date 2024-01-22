@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #3498db;
+        }
+        #workoutForm {
+            margin-bottom: 20px;
+        }
+        #workoutList {
+            list-style-type: none;
+            padding: 0;
+        }
+        .day {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+            width: 200px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 14px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Workout Tracker</h2>
+
+    <div id="workoutForm">
+        <label for="workoutInput">Add Workout:</label>
+        <input type="text" id="workoutInput" placeholder="Enter workout">
+        <button onclick="addWorkout()">Add</button>
+    </div>
+
+    <div id="workoutList">
+        <!-- Workout list will be displayed here -->
+    </div>
+
+    <h2>Weekly Overview</h2>
+
+    <div id="weeklyOverview">
+        <!-- Weekly overview will be displayed here -->
+    </div>
+
+    <script>
+        // Initialize a workout data structure
+        const weeklyWorkouts = {
+            Monday: [],
+            Tuesday: [],
+            Wednesday: [],
+            Thursday: [],
+            Friday: [],
+            Saturday: [],
+            Sunday: []
+        };
+
+        // Function to add a workout
+        function addWorkout() {
+            const dayOfWeek = prompt("Enter the day of the week (e.g., Monday):");
+            const workoutInput = document.getElementById("workoutInput").value;
+
+            if (dayOfWeek && workoutInput) {
+                weeklyWorkouts[dayOfWeek].push(workoutInput);
+                displayWorkouts();
+                displayWeeklyOverview();
+            } else {
+                alert("Please enter both the day of the week and workout details.");
+            }
+        }
+
+        // Function to display workouts
+        function displayWorkouts() {
+            const workoutList = document.getElementById("workoutList");
+            workoutList.innerHTML = "";
+
+            for (const day in weeklyWorkouts) {
+                const workouts = weeklyWorkouts[day];
+                if (workouts.length > 0) {
+                    const listItem = document.createElement("div");
+                    listItem.classList.add("day");
+                    listItem.innerHTML = `<strong>${day}:</strong> ${workouts.join(", ")}`;
+                    workoutList.appendChild(listItem);
+                }
+            }
+        }
+
+        // Function to display weekly overview
+        function displayWeeklyOverview() {
+            const weeklyOverview = document.getElementById("weeklyOverview");
+            weeklyOverview.innerHTML = "";
+
+            for (const day in weeklyWorkouts) {
+                const workouts = weeklyWorkouts[day];
+                const dayElement = document.createElement("div");
+                dayElement.classList.add("day");
+                dayElement.innerHTML = `<strong>${day}:</strong> ${workouts.length} workouts`;
+                weeklyOverview.appendChild(dayElement);
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Workout Tracker</h2>
+
+  <div id="workoutDays">
+    <!-- Days of the week will be dynamically added here -->
+  </div>
+
+  <script>
+    // Sample data structure to store workouts for each day
+    const workouts = {
+      Monday: [],
+      Tuesday: [],
+      Wednesday: [],
+      Thursday: [],
+      Friday: [],
+      Saturday: [],
+      Sunday: []
+    };
+
+    // Function to render workout days and input for adding workouts
+    function renderWorkoutDays() {
+      const workoutDaysContainer = document.getElementById('workoutDays');
+      workoutDaysContainer.innerHTML = '';
+
+      // Loop through each day of the week
+      for (const day in workouts) {
+        const dayContainer = document.createElement('div');
+        dayContainer.innerHTML = `<h3>${day}</h3>`;
+
+        const workoutList = document.createElement('ul');
+        workouts[day].forEach((workout, index) => {
+          const workoutItem = document.createElement('li');
+          workoutItem.textContent = workout;
+          workoutList.appendChild(workoutItem);
+        });
+
+        const inputField = document.createElement('input');
+        inputField.type = 'text';
+        inputField.placeholder = 'Add workout';
+        inputField.addEventListener('keyup', (event) => {
+          if (event.key === 'Enter') {
+            addWorkout(day, inputField.value);
+            renderWorkoutDays();
+          }
+        });
+
+        const addButton = document.createElement('button');
+        addButton.textContent = 'Add';
+        addButton.addEventListener('click', () => {
+          addWorkout(day, inputField.value);
+          renderWorkoutDays();
+        });
+
+        dayContainer.appendChild(workoutList);
+        dayContainer.appendChild(inputField);
+        dayContainer.appendChild(addButton);
+
+        workoutDaysContainer.appendChild(dayContainer);
+      }
+    }
+
+    // Function to add a workout for a specific day
+    function addWorkout(day, workout) {
+      workouts[day].push(workout);
+    }
+
+    // Initial rendering
+    renderWorkoutDays();
+  </script>
+
+</body>
+</html>
