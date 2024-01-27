@@ -1,8 +1,7 @@
 //Create a button that adds 1 to a botScore stored in localStorage 
 
-let botScore = 0 
+localStorage.setItem("botScore", 0);
 
+document.querySelector("button").addEventListener("click", addOne);
 
-for(let i = 0;){
-
-}
+function addOne() {}
