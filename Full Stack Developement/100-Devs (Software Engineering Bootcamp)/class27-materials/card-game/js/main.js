@@ -11,7 +11,7 @@ function getFetch() {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      if (data.media_type === "image") {
+      if (data.media_type === "image ") {
         document.querySelector("img").src = data.hdurl;
         document.querySelector("iframe").src = "";
       } else if (data.media_type === "video") {
