@@ -26,4 +26,13 @@ function getFetch() {
     .catch((err) => {
       console.log(`error ${err}`);
     });
+
+    function convertToNum(val){
+      if (val === 'ACE'){
+        return 14
+      } else if(val === 'KING'){
+        
+      }
+
+    }
 }
