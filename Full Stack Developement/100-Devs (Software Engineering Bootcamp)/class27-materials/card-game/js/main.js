@@ -31,8 +31,19 @@ function getFetch() {
       if (val === 'ACE'){
         return 14
       } else if(val === 'KING'){
-        
+        return 13
+      } else if(val === 'QUEEN'){
+        return 12
+      } else if(val === 'JACK'){
+        return 11
+      } else {
+        return val
       }
 
     }
 }
+
+let sum = numbers.reduce((acc,cv) => {
+  return acc + cv 
+})
+
